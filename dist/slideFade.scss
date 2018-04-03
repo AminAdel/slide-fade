@@ -1,0 +1,95 @@
+.slideFade {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	> .ul {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		
+		> .li {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			
+			&:not(:first-child) {
+				display: none;
+			}
+			
+			> .img_con {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				overflow: hidden;
+				
+				> img {
+					width: 100%;
+					min-height: 100%;
+				}
+			}
+			
+			> .info {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 20px 20px 20px 20px;
+				min-height: 50px;
+				color: #fff;
+				text-align: right;
+				background-color: rgba(0, 0, 0, 0.7);
+				
+				> header {
+					font-size: 14px;
+				}
+				> .title {
+					display: block;
+					position: relative;
+					margin-top: 10px;
+					font-size: 13px;
+				}
+				> .time {
+					text-align: left;
+				}
+			}
+		}
+	}
+	
+			
+	> .button {
+		position: absolute;
+		top: calc(50% - 25px);
+		display: flex;
+		align-items: center;
+		padding-right: 10px;
+		padding-left: 10px;
+		height: 50px;
+		color: #fff;
+		font-size: 16px;
+		background-color: rgba(0, 0, 0, 0.6);
+		cursor: pointer;
+		//transition: all 250ms;
+		
+		&.next {
+			right: 0;
+		}
+		
+		&.prev {
+			left: 0;
+		}
+		
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.8);
+			//transition: all 250ms;
+		}
+	}
+}
