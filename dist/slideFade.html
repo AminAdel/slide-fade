@@ -1,1 +1,35 @@
-
+<div class="container">
+	<div class="row">
+		<div class="col col-12 col-lg-6">
+			<div class="slideFade autoStart" id="home_top10_slide">
+				
+				<!-- slides -->
+				<div class="ul">
+					@for($i = 0; $i <= 5; $i++)
+						<div class="li item_{{ $i + 1 }} {{ $i == 0 ? 'active' : '' }}" data-item="{{ $i + 1 }}">
+							<!-- img_con -->
+							<a class="img_con" href="{{ url('/video/' . $top10[$i]['id']) }}">
+								<img src="{{ $top10[$i]['video_poster'] }}" alt="">
+							</a>
+							<!-- info -->
+							<div class="info">
+								<header>{{ $top10[$i]['category_title'] }}</header>
+								<a class="title" href="{{ url('/video/' . $top10[$i]['id']) }}">{{ $top10[$i]['title'] }}</a>
+							</div>
+							<!-- video time -->
+							<div class="videoTime">
+								{{ $top10[$i]['duration'] }}
+							</div>
+						</div><!-- /slide -->
+					@endfor
+				</div><!-- /slides -->
+				
+				
+				<!-- buttons -->
+				<div class="button next"><i class="fas fa-chevron-right"></i></div>
+				<div class="button prev"><i class="fas fa-chevron-left"></i></div>
+				
+			</div><!-- /slideFade -->
+		</div><!-- /col -->
+	</div><!-- row --->
+</div><!-- container --->
